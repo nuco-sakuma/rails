@@ -1,0 +1,9 @@
+FROM ruby:3.1.0-slim
+
+ENV APP_ROOT /web_app
+
+RUN mkdir -p $APP_ROOT
+
+COPY $APP_ROOT $APP_ROOT/
+
+WORKDIR $APP_ROOT
