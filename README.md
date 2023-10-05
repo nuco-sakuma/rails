@@ -51,8 +51,8 @@ default-authentication-plugin=mysql_native_password
 ### 1. dockerイメージを作成し、コンテナ内に入る
 ```
 # host
-docker compose build
-docker compose run web_app sh
+docker-compose build
+docker-compose run web_app sh
 ```
 ​
 ### 2. コンテナ内で必要なものをインストールし、初期ファイルを取得
