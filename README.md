@@ -190,7 +190,7 @@ rails db:create
 ​
 ### 6. 接続確認
 ```
-docker compose up
+docker-compose up
 ```
 * localhost:3001にアクセス
 <!-- 
