@@ -181,8 +181,8 @@ host: web_app-mysql
 ### 5. DB作成
 ```
 # host
-docker compose build
-docker compose run web_app sh
+docker-compose build
+docker-compose run web_app sh
 
 # in container
 rails db:create
