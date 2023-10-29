@@ -218,4 +218,11 @@ rails db:migrate
 docker compose run web_app sh
 rails generate controller StaticPages home help -->
 
+
+
+## データベースの確認方法
+```
+docker-compose exec web_app-mysql bash
+mysql -u root -p
+PW -> test
 ```
