@@ -20,3 +20,5 @@ ENV RUNTIME_PACKAGES="\
 RUN apt-get update && apt-get install -y ${RUNTIME_PACKAGES}
 
 RUN bundle install --jobs=4
+
+CMD rails s -b 0.0.0.0 -p 3000
