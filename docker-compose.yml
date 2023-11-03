@@ -6,7 +6,7 @@ services:
       dockerfile: web_app/docker/rails/Dockerfile
     volumes:
       - ./web_app:/web_app
-    command: rails s -b 0.0.0.0 -p 3000
+
     ports:
       - 3001:3000
     depends_on:
