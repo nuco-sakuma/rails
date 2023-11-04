@@ -17,6 +17,9 @@ services:
       dockerfile: web_app/docker/mysql/Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: web_app-mysql
     ports:
       - 3306:3306
     volumes:
