@@ -11,6 +11,7 @@ services:
       - 3001:3000
     depends_on:
       - web_app-mysql
+
   web_app-mysql:
     build:
       context: .
@@ -22,5 +23,13 @@ services:
     volumes:
       - db-store-web_app:/var/lib/mysql
     platform: linux/amd64
+
+  python_app:
+    build:
+      context: .
+      dockerfile: web_app/docker/python/Dockerfile
+    volumes:
+      - ./nba-api:/nba-api  # Pythonアプリケーションがあるディレクトリをマウント
+
 volumes:
   db-store-web_app:
