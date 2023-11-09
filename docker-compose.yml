@@ -30,6 +30,8 @@ services:
       dockerfile: web_app/docker/python/Dockerfile
     volumes:
       - ./nba-api:/nba-api  # Pythonアプリケーションがあるディレクトリをマウント
+    depends_on:
+      - web_app-mysql
 
 volumes:
   db-store-web_app:

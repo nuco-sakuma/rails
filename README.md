@@ -225,6 +225,13 @@ rails generate controller StaticPages home help -->
 docker-compose exec web_app-mysql bash
 mysql -u root -p
 PW -> test
+
+# コマンド
+show databases;
+use web_app_development;
+show tables; #テーブルの確認
+desc user; #テーブル設計の確認
+select * from users;
 ```
 
 
@@ -234,3 +241,5 @@ docker-compose run python_app sh
 # nba-api/sample.pyを実行する場合
 python nba-api/sample.py
 ```
+dropdown
+rails generate controller dropdown
