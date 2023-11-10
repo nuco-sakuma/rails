@@ -17,3 +17,4 @@ RUN pip install --upgrade setuptools
 RUN python -m pip install jupyterlab
 
 RUN python -m pip install nba_api
+RUN python -m pip install mysql-connector-python

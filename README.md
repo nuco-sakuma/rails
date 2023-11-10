@@ -241,5 +241,8 @@ docker-compose run python_app sh
 # nba-api/sample.pyを実行する場合
 python nba-api/sample.py
 ```
+
 dropdown
+やったコマンド
 rails generate controller dropdown
+rails generate model nba_players id:integer player_name:string
