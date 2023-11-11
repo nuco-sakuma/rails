@@ -1,0 +1,12 @@
+<select>
+          <option>チャットするユーザーを選択してください</option>
+          <option>ユーザー1</option>
+          <option>ユーザー2</option>
+</select>
+
+<select>
+<% @player_names.each do |player| %>
+  <!-- ユーザーの表示 -->
+  <option><%= player.player_name %></option>
+<% end %>
+</select>
