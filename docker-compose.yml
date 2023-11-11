@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: web_app/docker/rails/Dockerfile
+      args:
+        - buildCommand="./bin/render-build.sh"
     volumes:
       - ./web_app:/web_app
 
