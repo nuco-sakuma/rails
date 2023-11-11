@@ -11,7 +11,7 @@ services:
       - 3001:3000
     depends_on:
       - web_app-mysql
-  web_app-mysql:
+  web_app_development:
     build:
       context: .
       dockerfile: web_app/docker/mysql/Dockerfile
