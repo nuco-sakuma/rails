@@ -225,4 +225,38 @@ rails generate controller StaticPages home help -->
 docker-compose exec web_app-mysql bash
 mysql -u root -p
 PW -> test
+
+# コマンド
+show databases;
+use web_app_development;
+show tables; #テーブルの確認
+desc user; #テーブル設計の確認
+select * from users;
+```
+
+
+## python実行
+```
+docker-compose run python_app sh
+# nba-api/sample.pyを実行する場合
+python nba-api/sample.py
+```
+
+dropdown
+# やったコマンド
+## モデルの追加(branch: dropdown)
+```
+rails generate controller dropdown
+rails generate model nba_players id:integer player_name:string
+```
+
+## モデルの要素追加(ブランチ: mysql)
+(例)
+rails generate migration add_password_digest_to_users password_digest:string
+
+```
+rails generate migration add_sum_score_to_nba_players sum_score:integer
+rails generate migration add_post_count_to_nba_players post_count:integer
+rails generate migration add_score_to_nba_players score:integer
+
 ```
