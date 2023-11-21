@@ -264,6 +264,9 @@ rails generate migration add_score_to_nba_players score:integer
 ## プレイヤー表示画面
 ```
 rails generate controller NbaPlayer
+rails destroy controller NbaPlayer
+rails generate controller NbaPlayers new
+
 ```
 
 ## nba_playerブランチ
@@ -280,5 +283,7 @@ rails destory model nba_player player_name:string sum_score:integer post_count:i
 rails destroy model nba_players player_name:string
 
 
-
+rails destroy model review user: references nba_player:references content:string score:integer
+rails destroy controller reviews index
+    <%= f.select :sum_score, options_for_select((1..100).to_a), {}, { class: 'form-control' } %>
 ```
