@@ -186,6 +186,7 @@ docker-compose run web_app sh
 
 # in container
 rails db:create
+bin/rails db:migrate RAILS_ENV=development
 ```
 ​
 ### 6. 接続確認
@@ -259,4 +260,30 @@ rails generate migration add_sum_score_to_nba_players sum_score:integer
 rails generate migration add_post_count_to_nba_players post_count:integer
 rails generate migration add_score_to_nba_players score:integer
 
+```
+## プレイヤー表示画面
+```
+rails generate controller NbaPlayer
+rails destroy controller NbaPlayer
+rails generate controller NbaPlayers new
+
+```
+
+## nba_playerブランチ
+```
+rails destroy model nba_players id:integer player_name:string
+rails destroy migration add_sum_score_to_nba_players sum_score:integer
+rails destroy migration add_post_count_to_nba_players post_count:integer
+rails destroy migration add_score_to_nba_players score:integer 
+
+rails generate model nba_player player_name:string sum_score:integer post_count:integer score:integer 
+
+rails destory model nba_player player_name:string sum_score:integer post_count:integer score:integer 
+
+rails destroy model nba_players player_name:string
+
+
+rails destroy model review user: references nba_player:references content:string score:integer
+rails destroy controller reviews index
+    <%= f.select :sum_score, options_for_select((1..100).to_a), {}, { class: 'form-control' } %>
 ```
