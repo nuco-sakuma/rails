@@ -3,7 +3,9 @@ services:
   web_app:
     build:
       context: .
-      dockerfile: web_app/docker/rails/Dockerfile
+      dockerfile: web_app/docker/Dockerfile
+      args:
+        - buildCommand="./bin/render-build.sh"
     volumes:
       - ./web_app:/web_app
 
@@ -15,9 +17,12 @@ services:
   web_app-mysql:
     build:
       context: .
-      dockerfile: web_app/docker/mysql/Dockerfile
+      dockerfile: web_app/docker/Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: web_app-mysql
     ports:
       - 3306:3306
     volumes:
@@ -27,7 +32,7 @@ services:
   python_app:
     build:
       context: .
-      dockerfile: web_app/docker/python/Dockerfile
+      dockerfile: web_app/docker/Dockerfile
     volumes:
       - ./nba-api:/nba-api  # Pythonアプリケーションがあるディレクトリをマウント
     depends_on:

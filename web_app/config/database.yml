@@ -4,7 +4,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: test
-  host: web_app-mysql
+  host: web_app_development
 development:
   <<: *default
   database: web_app_development
