@@ -12,7 +12,7 @@ module WebApp
     config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    config.hosts << 'web-app-g73v.onrender.com'
     # These settings can be overridden in specific environments using the files
     config.active_storage.variant_processor = :mini_magick
     # in config/environments, which are processed later.
